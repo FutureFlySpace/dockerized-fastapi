@@ -1,0 +1,14 @@
+version: "3"
+
+services:
+  api:
+    image: ghrc.io/futureflyspace/dockerized_fastapi:latest
+    environment:
+      - FASTAPI_PORT="8000" # Port inside the container
+      - FASTAPI_DIR="app" # Directory inside the container
+      - FASTAPI_DEPS_FILE="requirments.txt" # Install additional python dependencies
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app/:/code/app/
+      - ./requirments.txt:/requirments.txt
