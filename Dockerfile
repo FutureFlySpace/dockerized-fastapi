@@ -25,7 +25,7 @@ COPY --chown=fastapi --chmod=744 ./entrypoint.sh /
 USER fastapi
 WORKDIR /code
 
-RUN pip install --no-cache-dir --upgrade fastapi pydantic uvicorn &&\
+RUN pip install --no-cache-dir --upgrade fastapi pydantic uvicorn
 
 EXPOSE 8000
 

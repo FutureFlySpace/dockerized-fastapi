@@ -3,6 +3,7 @@
 # 2023-10-20 - FutureFlySpace
 ##############################
 
+
 ##### VARS #####
 port=${FASTAPI_PORT}
 dir=${FASTAPI_DIR}
@@ -10,7 +11,7 @@ extra_deps=${FASTAPI_DEPS_FILE}
 
 
 ##### INSTALL EXTRA DEPS #####
-if [ ! -z ./$extra_deps ]; then
+if [ -e ./$extra_deps ]; then
     pip install --no-cache-dir --upgrade -r $extra_deps
 fi
 
